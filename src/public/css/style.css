@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #273746;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 50%;
+    background-color: #F7F9F9;
+    margin-top: 50px;
+    padding: 50px;
+    border-radius: 10px;
+    border: 1px solid #F4D03F;
+}
+.container h1{
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.container ul li {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    border: 1px solid #F4D03F;
+}
+
+.container ul li a {
+    text-decoration: none;
+    color: #273746;
+}
+.date {
+    padding-top: 4px;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+#add {
+    position: relative;
+    bottom: -20px;
+    left: 45%;
+    cursor: pointer;
+}
+section form {
+    margin: 15px;
+    text-align: center;
+    display: none;
+}
+section form input[type = text] {
+    height: 25px;
+    width: 60%;
+    border-radius: 6px;
+    padding: 3px 10px 3px 10px;
+    border: 1px solid #F4D03F;
+}
+#envoyer input[type = submit] {
+    height: 31px;
+    background-color: #F4D03F;
+    border: 1px solid #F4D03F;
+    border-radius: 6px;
+    width: 80px;
+    cursor: pointer;
+}
+
+ul li input[type = checkbox]{
+    width: 40px;
+}
+
+.state_done{
+    text-decoration: line-through;
+}
+.state_none{
+    text-decoration: none;
+}
+
+ul li a img{
+    margin-right: 15px;
+}
+.visibility{
+    display: none;
+}

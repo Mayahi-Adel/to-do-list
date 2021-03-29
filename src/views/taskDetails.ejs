@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>To DO LIST</title>
+</head>
+<body>
+
+    <section class="container">
+        <h1></h1>
+        <ul>
+        <li>date de creation : <%= task[0].date %></li>
+        <li>Resumé : <%= task[0].resume %></li>
+        
+        <li>Etat: <% if(task[0].state == 0){ %> Non fait <% } 
+            else { %> Fait <% } %>
+            </li>
+        </ul>
+    </section>
+
+    
+</body>
+</html>

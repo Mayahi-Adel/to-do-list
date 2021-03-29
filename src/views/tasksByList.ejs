@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>To DO LIST</title>
+</head>
+<body>
+    <section class="container">
+
+        <h1><%= listName %></h1>
+
+        <form  action="/tasks" method="POST" id="envoyer">
+            <input type="text" name="resume">
+            <input type="text" name="listId" value='<%= listId %>' class="visibility">
+            <input type="submit">
+        </form>
+
+        <ul>
+            <%  list.forEach(tache => {  %>
+                <li>
+                    <% 
+                        if(tache.state == 0){ %>
+                            <a href="<%= listId %>/<%= tache.id_task %>/<%= tache.state %>"> <img src="/images/edit.svg" alt="Fait" width="25px"></a>
+                            
+                            <a href="taskDetails/<%= tache.id_task %>" > <span class="state_none"> <%= tache.resume %> </span>  </a> 
+                            
+                            <a href="<%= listId %>/<%= tache.id_task %>"><img src="/images/x-button.svg" alt="Supprimer" width="20px"></a>
+                           
+                            <% } else { %>
+                            <a href="<%= listId %>/<%= tache.id_task %>/<%= tache.state %>"> <img src="/images/check.svg" alt="Non fait" width="25px"></a> 
+                            
+                            <a href="taskDetails/<%= tache.id_task %>" > <span class="state_done"> <%= tache.resume %> </span>  </a>
+                            
+                            <a href="<%= listId %>/<%= tache.id_task %>"><img src="/images/x-button.svg" alt="Supprimer" width="20px"></a>
+                            <% }
+                    %>
+                    
+                
+                </li>
+            <% }) %>
+        </ul>
+        <div id="add"><img src="/images/plus.svg" alt="" width="10%" onclick="displayForm()"></div>
+    </section>
+    <script src="/js/script.js"></script>
+</body>
+</html>
